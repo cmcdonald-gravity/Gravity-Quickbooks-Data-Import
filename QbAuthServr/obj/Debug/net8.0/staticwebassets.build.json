@@ -1,11 +1,77 @@
 {
   "Version": 1,
-  "Hash": "yB0/XDjSmXlyRJhmyhgGN/j4cMtzOLUoCLfO+eMevv4=",
+  "Hash": "/ug93TKxIQJW23dAA6pl74ePuZVuCBDXA+1u0xkAR6c=",
   "Source": "QbAuthServr",
   "BasePath": "_content/QbAuthServr",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "QbAuthServr\\wwwroot",
+      "Source": "QbAuthServr",
+      "ContentRoot": "C:\\Users\\caden\\OneDrive\\desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\wwwroot\\",
+      "BasePath": "_content/QbAuthServr",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\caden\\OneDrive\\desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\wwwroot\\app.js",
+      "SourceId": "QbAuthServr",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\caden\\OneDrive\\desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\wwwroot\\",
+      "BasePath": "_content/QbAuthServr",
+      "RelativePath": "app.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\app.js"
+    },
+    {
+      "Identity": "C:\\Users\\caden\\OneDrive\\desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\wwwroot\\index.html",
+      "SourceId": "QbAuthServr",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\caden\\OneDrive\\desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\wwwroot\\",
+      "BasePath": "_content/QbAuthServr",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\caden\\OneDrive\\desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\wwwroot\\styles.css",
+      "SourceId": "QbAuthServr",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\caden\\OneDrive\\desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\wwwroot\\",
+      "BasePath": "_content/QbAuthServr",
+      "RelativePath": "styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\styles.css"
+    }
+  ]
 }

@@ -24,4 +24,5 @@ C:\Users\caden\OneDrive\desktop\Gravity Quickbooks Data Import\QbAuthServr\obj\D
 C:\Users\caden\OneDrive\desktop\Gravity Quickbooks Data Import\QbAuthServr\obj\Debug\net8.0\QbAuthServr.pdb
 C:\Users\caden\OneDrive\desktop\Gravity Quickbooks Data Import\QbAuthServr\obj\Debug\net8.0\QbAuthServr.genruntimeconfig.cache
 C:\Users\caden\OneDrive\desktop\Gravity Quickbooks Data Import\QbAuthServr\obj\Debug\net8.0\ref\QbAuthServr.dll
+C:\Users\caden\OneDrive\desktop\Gravity Quickbooks Data Import\QbAuthServr\bin\Debug\net8.0\QbAuthServr.staticwebassets.runtime.json
 C:\Users\caden\OneDrive\desktop\Gravity Quickbooks Data Import\QbAuthServr\bin\Debug\net8.0\tokens.json

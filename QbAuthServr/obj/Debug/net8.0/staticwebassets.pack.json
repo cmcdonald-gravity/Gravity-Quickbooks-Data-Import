@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\caden\\OneDrive\\desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\wwwroot\\app.js",
+      "PackagePath": "staticwebassets\\app.js"
+    },
+    {
+      "Id": "C:\\Users\\caden\\OneDrive\\desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\caden\\OneDrive\\desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\wwwroot\\styles.css",
+      "PackagePath": "staticwebassets\\styles.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.QbAuthServr.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.QbAuthServr.props",
+      "PackagePath": "build\\QbAuthServr.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.QbAuthServr.props",
+      "PackagePath": "buildMultiTargeting\\QbAuthServr.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.QbAuthServr.props",
+      "PackagePath": "buildTransitive\\QbAuthServr.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

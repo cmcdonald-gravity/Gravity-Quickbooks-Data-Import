@@ -1,0 +1,112 @@
+:root {
+  /* Gravity-inspired palette */
+  --bg: #424242;              /* Page background = dark grey banner */
+  --card-bg: #ffffff;         /* White content cards */
+  --border: #cccccc;
+
+  --text-main: #212121;
+  --text-muted: #666666;
+
+  --gravity-red: #d32f2f;
+  --gravity-red-dark: #b71c1c;
+
+  --table-header-bg: #f0f0f0;
+  --table-row-alt: #fafafa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);        /* Dark neutral page background */
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  color: var(--text-main);
+}
+
+/* Main content card */
+.container {
+  max-width: 980px;
+  margin: 6vh auto;
+  padding: 28px;
+  background: var(--card-bg);          /* White card */
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.panel { 
+  margin-top: 18px; 
+}
+
+.muted { 
+  color: var(--text-muted); 
+}
+
+.status {
+  margin-top: 10px;
+  color: var(--text-muted);
+}
+
+/* Buttons (Gravity Red) */
+.btn-primary,
+.btn-success {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--gravity-red);
+  color: white;
+  transition: background 0.18s ease;
+}
+
+.btn-primary:hover,
+.btn-success:hover {
+  background: var(--gravity-red-dark);
+}
+
+/* Results table container */
+.results {
+  margin-top: 22px;
+  overflow-x: auto;
+  background: var(--card-bg);
+  border-radius: 6px;
+}
+
+/* Table styling */
+table.data {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+}
+
+/* Header row */
+table.data thead th {
+  background: var(--table-header-bg);
+  color: var(--text-main);
+  font-weight: 600;
+  border-bottom: 2px solid var(--border);
+  padding: 10px 12px;
+  position: sticky;
+  top: 0;
+}
+
+/* Table cells */
+table.data td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Zebra rows */
+table.data tbody tr:nth-child(odd) {
+  background: var(--table-row-alt);
+}
+
+table.data tbody tr:hover {
+  background: #eeeeee;
+}
