@@ -1,11 +1,14 @@
-:root {
-  --qb-green: #2ca01c;
-  --qb-green-hover: #279218;
-  --text-dark: #1f2937;
-  --text-light: #ffffff;
-  --bg: #f8fafc;
-  --card: #ffffff;
-  --border: #e5e7eb;
+:root{
+  --bg: #0b1020;
+  --card: #121a36;
+  --border: #22305d;
+  --text: #e6eefc;
+  --muted: #b8c4e6;
+  --ok: #a3ffb3;
+  --primary: #2563eb;
+  --primary2: #1f4fd1;
+  --success: #2ca01c;
+  --success2: #279218;
 }
 
 * { box-sizing: border-box; }
@@ -15,43 +18,43 @@ html, body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: var(--bg);
-  color: var(--text-dark);
+  color: var(--text);
 }
 
 .container {
-  max-width: 640px;
+  max-width: 650px;
   margin: 10vh auto;
-  padding: 2rem;
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 12px;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.35);
 }
 
-h1 {
-  margin-top: 0;
-  font-size: 1.5rem;
-}
+.panel { margin-top: 20px; }
 
-.qb-btn {
-  appearance: none;
-  background-color: var(--qb-green);
-  color: var(--text-light);
-  padding: 12px 18px;
+.muted { color: var(--muted); }
+.ok { color: var(--ok); }
+
+code { color: var(--ok); }
+
+.status { margin-top: 10px; }
+
+.btn-primary,
+.btn-success {
+  display: inline-block;
+  padding: 14px 22px;
   border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 700;
   cursor: pointer;
-  transition: background-color .15s ease, transform .02s ease;
+  color: white;
+  transition: background 0.2s;
 }
 
-.qb-btn:hover { background-color: var(--qb-green-hover); }
-.qb-btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--primary); }
+.btn-primary:hover { background: var(--primary2); }
 
-.status {
-  margin-top: 1rem;
-  color: #475569;
-  min-height: 1.25rem;
-  font-size: 0.95rem;
-}
+.btn-success { background: var(--success); }
+.btn-success:hover { background: var(--success2); }

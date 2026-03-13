@@ -3,21 +3,35 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Connect to QuickBooks</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>QuickBooks Connector</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <main class="container">
-    <h1>QuickBooks Connection</h1>
+    
+    <h1 id="title">QuickBooks Connection</h1>
 
-    <button id="connectQB" class="qb-btn" aria-label="Connect to QuickBooks">
-      Connect to QuickBooks
-    </button>
+    <!-- CONNECT STATE -->
+    <div id="connectState" class="panel" hidden>
+      <p class="muted">Click below to connect your QuickBooks account.</p>
+      <button id="connectQB" class="btn-primary">Connect to QuickBooks</button>
+      <p id="status" class="status"></p>
+    </div>
 
-    <p id="status" class="status" aria-live="polite"></p>
+    <!-- CONNECTED STATE -->
+    <div id="connectedState" class="panel" hidden>
+      <p class="ok">Connected to QuickBooks!</p>
+      <p class="muted">Realm ID: <code id="realmIdText"></code></p>
+
+      <form method="post" action="https://localhost:5148/api/import-transactions">
+        <input type="hidden" id="realmIdInput" name="realmId" />
+        <button type="submit" class="btn-success">Import Transactions</button>
+      </form>
+    </div>
+
   </main>
 
   <script src="app.js"></script>
 </body>
 </html>
-``

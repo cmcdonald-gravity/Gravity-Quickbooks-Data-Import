@@ -1,15 +1,38 @@
 (function () {
-  const btn = document.getElementById("connectQB");
-  const statusEl = document.getElementById("status");
 
-  // Frontend never builds the Intuit URL and never stores client secrets.
-  // It simply asks YOUR server to start the OAuth flow.
-  // Change the path if your server uses a different route.
-  const START_OAUTH_PATH = "/auth/quickbooks";
+  const API = "https://localhost:5148";
 
-  btn?.addEventListener("click", () => {
-    if (statusEl) statusEl.textContent = "Redirecting to QuickBooks…";
-    // Full page navigation so cookies/session are included and redirects work
-    window.location.assign(START_OAUTH_PATH);
-  });
+  const qs = new URLSearchParams(location.search);
+  const connected = qs.get("connected") === "1";
+  const realmId = qs.get("realmId") || "";
+
+  const get = (id) => document.getElementById(id);
+
+  const connectState = get("connectState");
+  const connectedState = get("connectedState");
+  const title = get("title");
+
+  if (connected && realmId) {
+
+    // ----- CONNECTED -----
+    title.textContent = "QuickBooks Connected";
+    connectState.hidden = true;
+    connectedState.hidden = false;
+
+    get("realmIdText").textContent = realmId;
+    get("realmIdInput").value = realmId;
+
+  } else {
+
+    // ----- NOT CONNECTED -----
+    title.textContent = "QuickBooks Connection";
+    connectState.hidden = false;
+    connectedState.hidden = true;
+
+    get("connectQB").addEventListener("click", () => {
+      get("status").textContent = "Redirecting to QuickBooks…";
+      window.location.href = API + "/auth/quickbooks";
+    });
+  }
+
 })();
