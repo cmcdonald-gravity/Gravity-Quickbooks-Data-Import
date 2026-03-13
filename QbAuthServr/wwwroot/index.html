@@ -19,10 +19,23 @@
 
     <!-- CONNECTED STATE -->
     <section id="connectedState" class="panel" hidden>
-      <button id="importBtn" class="btn-success">Import Transactions</button>
+      <!-- Bills -->
+      <h2>Bills</h2>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <button id="importBtn"   class="btn-success">Import Bills</button>
+        <button id="downloadBtn" class="btn-primary" style="display:none;">Download Vouchers (.xlsx)</button>
+      </div>
       <p id="importStatus" class="status" aria-live="polite"></p>
 
-      <div id="results" class="results"></div>
+      <hr style="margin:24px 0; opacity:.3;" />
+
+      <!-- Chart of Accounts -->
+      <h2>Chart of Accounts</h2>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <button id="accountsImportBtn"   class="btn-success">Import Chart of Accounts</button>
+        <button id="accountsDownloadBtn" class="btn-primary" style="display:none;">Download Chart of Accounts (.xlsx)</button>
+      </div>
+      <p id="accountsStatus" class="status" aria-live="polite"></p>
     </section>
   </main>
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/ug93TKxIQJW23dAA6pl74ePuZVuCBDXA+1u0xkAR6c=",
+  "Hash": "qmdUH+jVL7sNKvlylds6zNBgy628IYcVOHzOrqp/skA=",
   "Source": "QbAuthServr",
   "BasePath": "_content/QbAuthServr",
   "Mode": "Default",
@@ -72,6 +72,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\caden\\OneDrive\\desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\wwwroot\\templates\\Active Chart of Accounts.xlsx",
+      "SourceId": "QbAuthServr",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\caden\\OneDrive\\desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\wwwroot\\",
+      "BasePath": "_content/QbAuthServr",
+      "RelativePath": "templates/Active Chart of Accounts.xlsx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\templates\\Active Chart of Accounts.xlsx"
+    },
+    {
+      "Identity": "C:\\Users\\caden\\OneDrive\\desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\wwwroot\\templates\\All Vouchers.xlsx",
+      "SourceId": "QbAuthServr",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\caden\\OneDrive\\desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\wwwroot\\",
+      "BasePath": "_content/QbAuthServr",
+      "RelativePath": "templates/All Vouchers.xlsx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\templates\\All Vouchers.xlsx"
     }
   ]
 }

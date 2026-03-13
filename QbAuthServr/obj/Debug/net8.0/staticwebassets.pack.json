@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\styles.css"
     },
     {
+      "Id": "C:\\Users\\caden\\OneDrive\\desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\wwwroot\\templates\\Active Chart of Accounts.xlsx",
+      "PackagePath": "staticwebassets\\templates\\Active Chart of Accounts.xlsx"
+    },
+    {
+      "Id": "C:\\Users\\caden\\OneDrive\\desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\wwwroot\\templates\\All Vouchers.xlsx",
+      "PackagePath": "staticwebassets\\templates\\All Vouchers.xlsx"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.QbAuthServr.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

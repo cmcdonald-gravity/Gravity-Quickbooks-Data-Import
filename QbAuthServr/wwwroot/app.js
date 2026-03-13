@@ -5,24 +5,20 @@
 
   const $ = (id) => document.getElementById(id);
 
-  const titleEl        = $("title");
-  const connectState   = $("connectState");
-  const connectedState = $("connectedState");
-  const statusEl       = $("status");
-  const importBtn      = $("importBtn");
-  const importStatus   = $("importStatus");
-  const resultsDiv     = $("results");
+  const titleEl            = $("title");
+  const connectState       = $("connectState");
+  const connectedState     = $("connectedState");
+  const statusEl           = $("status");
 
-  function escapeHtml(s) {
-    return String(s ?? "").replace(/[&<>"']/g, (m) => ({
-      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"
-    }[m]));
-  }
+  // Bills
+  const importBtn          = $("importBtn");
+  const downloadBtn        = $("downloadBtn");
+  const importStatus       = $("importStatus");
 
-  function formatCurrency(n) {
-    const v = Number(n || 0);
-    return v.toLocaleString(undefined, { style: "currency", currency: "USD" });
-  }
+  // Accounts (COA)
+  const accountsImportBtn  = $("accountsImportBtn");
+  const accountsDownloadBtn= $("accountsDownloadBtn");
+  const accountsStatus     = $("accountsStatus");
 
   function showConnect() {
     titleEl.textContent = "QuickBooks Connection";
@@ -36,76 +32,27 @@
     connectedState.hidden = false;
   }
 
-  function renderBillsTable(rows) {
-    resultsDiv.innerHTML = "";
-
-    if (!Array.isArray(rows) || rows.length === 0) {
-      resultsDiv.innerHTML = `<p class="muted">No bills found.</p>`;
-      return;
-    }
-
-    // Optional: simple ordering
-    rows.sort((a, b) => (a.TxnDate ?? "").localeCompare(b.TxnDate ?? ""));
-
-    const table = document.createElement("table");
-    table.className = "data";
-
-    const thead = document.createElement("thead");
-    thead.innerHTML = `
-      <tr>
-        <th>Doc #</th>
-        <th>Date</th>
-        <th>Vendor</th>
-        <th>Total</th>
-        <th>Memo</th>
-        <th>Id</th>
-      </tr>
-    `;
-    table.appendChild(thead);
-
-    const tbody = document.createElement("tbody");
-    for (const r of rows) {
-      const tr = document.createElement("tr");
-      tr.innerHTML = `
-        <td>${escapeHtml(r.DocNumber)}</td>
-        <td>${escapeHtml(r.TxnDate)}</td>
-        <td>${escapeHtml(r.VendorName)}</td>
-        <td>${formatCurrency(r.TotalAmt)}</td>
-        <td>${escapeHtml(r.Memo)}</td>
-        <td>${escapeHtml(r.Id)}</td>
-      `;
-      tbody.appendChild(tr);
-    }
-
-    table.appendChild(tbody);
-    resultsDiv.appendChild(table);
-  }
-
   async function fetchBills() {
     if (!realmId) {
       importStatus.textContent = "Missing realmId. Please reconnect.";
       return;
     }
-
-    resultsDiv.innerHTML = "";
     importStatus.textContent = "Loading bills…";
     importBtn.disabled = true;
-
+    downloadBtn.style.display = "none";
     try {
-      const url = `/api/bills?realmId=${encodeURIComponent(realmId)}`;
-      const res = await fetch(url, {
+      const res = await fetch(`/api/bills?realmId=${encodeURIComponent(realmId)}`, {
         headers: { "Accept": "application/json" }
       });
-
       if (!res.ok) {
         const text = await res.text();
         throw new Error(`Server error ${res.status}: ${text}`);
       }
-
       const rows = await res.json();
-      importStatus.textContent = `Loaded ${rows.length} bills.`;
-      renderBillsTable(rows);
-
+      importStatus.textContent = `Loaded ${Array.isArray(rows) ? rows.length : 0} bills.`;
+      downloadBtn.style.display = "inline-block";
+      downloadBtn.onclick = () =>
+        window.location.assign(`/api/export-vouchers?realmId=${encodeURIComponent(realmId)}`);
     } catch (err) {
       console.error(err);
       importStatus.textContent = `Failed to load bills: ${err.message}`;
@@ -114,10 +61,39 @@
     }
   }
 
-  // Startup logic
+  async function fetchAccounts() {
+    if (!realmId) {
+      accountsStatus.textContent = "Missing realmId. Please reconnect.";
+      return;
+    }
+    accountsStatus.textContent = "Loading chart of accounts…";
+    accountsImportBtn.disabled = true;
+    accountsDownloadBtn.style.display = "none";
+    try {
+      const res = await fetch(`/api/accounts?realmId=${encodeURIComponent(realmId)}`, {
+        headers: { "Accept": "application/json" }
+      });
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(`Server error ${res.status}: ${text}`);
+      }
+      const rows = await res.json();
+      accountsStatus.textContent = `Loaded ${Array.isArray(rows) ? rows.length : 0} accounts.`;
+      accountsDownloadBtn.style.display = "inline-block";
+      accountsDownloadBtn.onclick = () =>
+        window.location.assign(`/api/export-accounts?realmId=${encodeURIComponent(realmId)}`);
+    } catch (err) {
+      console.error(err);
+      accountsStatus.textContent = `Failed to load accounts: ${err.message}`;
+    } finally {
+      accountsImportBtn.disabled = false;
+    }
+  }
+
   if (isConnected && realmId) {
     showConnected();
     importBtn.addEventListener("click", fetchBills);
+    accountsImportBtn.addEventListener("click", fetchAccounts);
   } else {
     showConnect();
     $("connectQB")?.addEventListener("click", () => {
