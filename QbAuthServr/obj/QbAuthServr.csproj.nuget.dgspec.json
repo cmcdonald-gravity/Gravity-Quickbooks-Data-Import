@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\caden\\OneDrive\\desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\QbAuthServr.csproj": {}
+    "C:\\Users\\caden\\OneDrive\\Desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\QbAuthServr.csproj": {}
   },
   "projects": {
-    "C:\\Users\\caden\\OneDrive\\desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\QbAuthServr.csproj": {
+    "C:\\Users\\caden\\OneDrive\\Desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\QbAuthServr.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\caden\\OneDrive\\desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\QbAuthServr.csproj",
+        "projectUniqueName": "C:\\Users\\caden\\OneDrive\\Desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\QbAuthServr.csproj",
         "projectName": "QbAuthServr",
-        "projectPath": "C:\\Users\\caden\\OneDrive\\desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\QbAuthServr.csproj",
+        "projectPath": "C:\\Users\\caden\\OneDrive\\Desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\QbAuthServr.csproj",
         "packagesPath": "C:\\Users\\caden\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\caden\\OneDrive\\desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\obj\\",
+        "outputPath": "C:\\Users\\caden\\OneDrive\\Desktop\\Gravity Quickbooks Data Import\\QbAuthServr\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\caden\\AppData\\Roaming\\NuGet\\NuGet.Config"
