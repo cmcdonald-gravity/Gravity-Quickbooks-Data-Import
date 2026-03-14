@@ -3,7 +3,6 @@ services:
     name: gravity-import
     env: docker
     plan: free
-    autoDeploy: true
     healthCheckPath: /health
     disk:
       name: data
@@ -14,11 +13,9 @@ services:
         value: Production
       - key: DATA_DIR
         value: /data
-      # Set these in the Render dashboard as "fromDatabase"/"sync: false" if you prefer
-      - key: QuickBooks:ClientId
+      - key: QuickBooks__ClientId
         sync: false
-      - key: QuickBooks:ClientSecret
+      - key: QuickBooks__ClientSecret
         sync: false
-      - key: QuickBooks:RedirectUri
-        # fill after the first deploy with your actual onrender URL:
-        value: https://gravity-import.onrender.com/auth/quickbooks/callback
+      - key: QuickBooks__RedirectUri
+        value: https://gravity-quickbooks-data-import.onrender.com/auth/quickbooks/callback
