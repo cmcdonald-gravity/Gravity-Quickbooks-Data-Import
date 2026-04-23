@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QbAuthServr")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07dea23c7e9179eb5ce6733182bc518aa1edfdf6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22405544c715a553e1300e1d8b87882fbee0d9d8")]
 [assembly: System.Reflection.AssemblyProductAttribute("QbAuthServr")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QbAuthServr")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
